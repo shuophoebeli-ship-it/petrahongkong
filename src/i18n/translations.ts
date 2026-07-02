@@ -171,7 +171,8 @@ export interface Translation {
     }
     maps: {
       title: string
-      items: { title: string; embedUrl: string }[]
+      viewButton: string
+      items: { title: string; url: string; previewImage?: string }[]
     }
   }
   footer: {
@@ -716,7 +717,7 @@ export const translations: Record<Language, Translation> = {
             city: '香港',
             company: '盤石管理科技有限公司',
             companyEn: 'Petra Management Technology Limited',
-            address: '香港特別行政區九龍柯士甸道西1號\n環球貿易廣場 8653C',
+            address: '香港特別行政區九龍柯士甸道西1號\n環球貿易廣場8653C',
             phones: ['+852 6948 3416'],
           },
           {
@@ -724,23 +725,24 @@ export const translations: Record<Language, Translation> = {
             company: '深圳市盤石家族數字科技有限公司',
             companyEn: 'Shenzhen Pan Shi Family Digital Technology Co., Ltd.',
             address:
-              '深圳市前海深港合作區\n南山街道夢海大道5188號\n前海深港夢工場北區一期 G 棟 402L',
+              '深圳市前海深港合作區南山街道夢海大道5188號\n前海深港夢工場北區一期G棟402L',
             phones: ['+86 139 2464 4116', '+86 139 2466 4416'],
           },
         ],
       },
       maps: {
         title: '辦公地點',
+        viewButton: '查看高德地圖',
         items: [
           {
             title: '香港辦公室',
-            embedUrl:
-              'https://maps.google.com/maps?q=International+Commerce+Centre,+1+Austin+Road+West,+Kowloon,+Hong+Kong&hl=zh-TW&z=17&output=embed',
+            url: 'https://ditu.amap.com/search?query=%E9%A6%99%E6%B8%AF%20%E4%B9%9D%E9%BE%8D%20%E6%9F%AF%E5%A3%AB%E7%94%B8%E9%81%93%E8%A5%BF1%E8%99%9F%20%E7%92%B0%E7%90%83%E8%B2%BF%E6%98%93%E5%BB%A3%E5%A0%B4%208653C',
+            previewImage: '/banners/contact-icc-building.jpg',
           },
           {
             title: '深圳辦公室',
-            embedUrl:
-              'https://maps.google.com/maps?q=%E5%89%8D%E6%B5%B7%E6%B7%B1%E6%B8%AF%E6%A2%A6%E5%B7%A5%E5%9C%BA%E5%8C%97%E5%8C%BA,+5188+Meng+Hai+Avenue,+Nanshan,+Shenzhen&hl=zh-CN&z=17&output=embed',
+            url: 'https://ditu.amap.com/search?query=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%89%8D%E6%B5%B7%E6%B7%B1%E6%B8%AF%E5%90%88%E4%BD%9C%E5%8D%80%E5%8D%97%E5%B1%B1%E8%A1%97%E9%81%93%E5%A4%A2%E6%B5%B7%E5%A4%A7%E9%81%935188%E8%99%9F%E5%89%8D%E6%B5%B7%E6%B7%B1%E6%B8%AF%E5%A4%A2%E5%B7%A5%E5%A0%B4%E5%8C%97%E5%8D%80%E4%B8%80%E6%9C%9FG%E6%A3%9F402L',
+            previewImage: '/banners/business-icc-harbour.jpg',
           },
         ],
       },
@@ -1317,16 +1319,17 @@ export const translations: Record<Language, Translation> = {
       },
       maps: {
         title: 'Office Locations',
+        viewButton: 'View on Amap',
         items: [
           {
             title: 'Hong Kong Office',
-            embedUrl:
-              'https://maps.google.com/maps?q=International+Commerce+Centre,+1+Austin+Road+West,+Kowloon,+Hong+Kong&hl=en&z=17&output=embed',
+            url: 'https://ditu.amap.com/search?query=%E9%A6%99%E6%B8%AF%20%E4%B9%9D%E9%BE%8D%20%E6%9F%AF%E5%A3%AB%E7%94%B8%E9%81%93%E8%A5%BF1%E8%99%9F%20%E7%92%B0%E7%90%83%E8%B2%BF%E6%98%93%E5%BB%A3%E5%A0%B4%208653C',
+            previewImage: '/banners/contact-icc-building.jpg',
           },
           {
             title: 'Shenzhen Office',
-            embedUrl:
-              'https://maps.google.com/maps?q=Qianhai+Shenzhen-Hong+Kong+Dream+Workshop,+5188+Meng+Hai+Avenue,+Shenzhen&hl=en&z=17&output=embed',
+            url: 'https://ditu.amap.com/search?query=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%89%8D%E6%B5%B7%E6%B7%B1%E6%B8%AF%E5%90%88%E4%BD%9C%E5%8D%80%E5%8D%97%E5%B1%B1%E8%A1%97%E9%81%93%E5%A4%A2%E6%B5%B7%E5%A4%A7%E9%81%935188%E8%99%9F%E5%89%8D%E6%B5%B7%E6%B7%B1%E6%B8%AF%E5%A4%A2%E5%B7%A5%E5%A0%B4%E5%8C%97%E5%8D%80%E4%B8%80%E6%9C%9FG%E6%A3%9F402L',
+            previewImage: '/banners/business-icc-harbour.jpg',
           },
         ],
       },
