@@ -83,7 +83,7 @@ export default function Contact() {
           {c.offices.locations.map((office, index) => {
             const map = c.maps.items[index]
             return (
-              <div key={office.city} className="flex flex-col gap-6">
+              <div key={office.city} className="flex flex-col gap-4">
                 <div className="flex flex-col gap-6 rounded-xl border border-gold-500/40 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md md:p-8">
                   <div className="border-b border-neutral-100 pb-5">
                     <p className="text-sm font-semibold tracking-wide text-gold-700 uppercase">
@@ -117,32 +117,14 @@ export default function Contact() {
                 </div>
 
                 {map && (
-                  <div className="overflow-hidden rounded-xl border border-neutral-200 shadow-sm">
-                    <div className="relative h-[400px] w-full bg-neutral-100">
-                      {map.previewImage ? (
-                        <img
-                          src={map.previewImage}
-                          alt={map.title}
-                          className="h-full w-full object-cover"
-                        />
-                      ) : (
-                        <div className="flex h-full items-center justify-center text-sm text-neutral-400">
-                          {map.title}
-                        </div>
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/35 via-transparent to-transparent" />
-                    </div>
-                    <div className="border-t border-neutral-100 bg-neutral-50 px-5 py-4 md:px-6">
-                      <a
-                        href={map.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center rounded-lg border border-gold-500/60 bg-white px-5 py-2.5 text-sm font-semibold text-gold-700 transition-all hover:border-gold-600 hover:bg-gold-500/5 hover:text-gold-800"
-                      >
-                        {c.maps.viewButton}
-                      </a>
-                    </div>
-                  </div>
+                  <a
+                    href={map.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-fit items-center justify-center rounded-lg border border-gold-500/60 bg-white px-5 py-2.5 text-sm font-semibold text-gold-700 transition-all hover:border-gold-600 hover:bg-gold-500/5 hover:text-gold-800"
+                  >
+                    {c.maps.viewButton}
+                  </a>
                 )}
               </div>
             )
