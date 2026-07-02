@@ -19,6 +19,10 @@ export interface Translation {
   companyName: string
   companyNameEn: string
   nav: NavItem
+  breadcrumb: {
+    home: string
+    ariaLabel: string
+  }
   home: {
     carousel: {
       ariaLabel: string
@@ -192,6 +196,10 @@ export const translations: Record<Language, Translation> = {
       advantages: '核心優勢',
       team: '團隊與合作',
       contact: '聯繫我們',
+    },
+    breadcrumb: {
+      home: '首頁',
+      ariaLabel: '麵包屑導航',
     },
     home: {
       carousel: {
@@ -771,6 +779,10 @@ export const translations: Record<Language, Translation> = {
       advantages: 'Advantages',
       team: 'Team & Partners',
       contact: 'Contact',
+    },
+    breadcrumb: {
+      home: 'Home',
+      ariaLabel: 'Breadcrumb',
     },
     home: {
       carousel: {

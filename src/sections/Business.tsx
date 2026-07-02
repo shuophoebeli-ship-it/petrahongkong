@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import SectionBanner from '../components/SectionBanner'
+import PageBreadcrumb from '../components/PageBreadcrumb'
 import BusinessAnchorNav from '../components/BusinessAnchorNav'
 import { usePageBanner } from '../hooks/usePageBanner'
 
@@ -174,6 +175,8 @@ export default function Business() {
         headline={b.banner.headline}
         objectPosition={banner.objectPosition}
       />
+
+      <PageBreadcrumb currentLabel={t.nav.business} />
 
       <BusinessAnchorNav items={b.anchorNav} />
 

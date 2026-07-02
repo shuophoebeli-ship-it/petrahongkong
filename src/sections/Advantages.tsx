@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import SectionBanner from '../components/SectionBanner'
+import PageBreadcrumb from '../components/PageBreadcrumb'
 import SectionHeader from '../components/SectionHeader'
 import { usePageBanner } from '../hooks/usePageBanner'
 
@@ -111,7 +112,9 @@ export default function Advantages() {
         objectPosition={pageBanner.objectPosition}
       />
 
-      <div className="section-container pt-[60px] pb-16 md:pb-20">
+      <PageBreadcrumb currentLabel={t.nav.advantages} />
+
+      <div className="section-container pt-6 pb-16 md:pt-8 md:pb-20">
         <SectionHeader headline={coreTitle} compact />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">

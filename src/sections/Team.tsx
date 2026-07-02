@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import SectionBanner from '../components/SectionBanner'
+import PageBreadcrumb from '../components/PageBreadcrumb'
 import { usePageBanner } from '../hooks/usePageBanner'
 
 type TeamIcon =
@@ -107,8 +108,10 @@ export default function Team() {
         objectPosition={pageBanner.objectPosition}
       />
 
+      <PageBreadcrumb currentLabel={t.nav.team} />
+
       {/* 核心管理團隊 */}
-      <div className="section-container pt-[60px] pb-16 md:pb-20">
+      <div className="section-container pt-6 pb-16 md:pt-8 md:pb-20">
         <SectionTitle>{team.management.title}</SectionTitle>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:gap-8">

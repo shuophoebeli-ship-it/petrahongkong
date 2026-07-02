@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import SectionBanner from '../components/SectionBanner'
+import PageBreadcrumb from '../components/PageBreadcrumb'
 import { usePageBanner } from '../hooks/usePageBanner'
 
 function SectionHeading({ children }: { children: ReactNode }) {
@@ -41,6 +42,8 @@ export default function Solutions() {
         subtext={s.banner.subtext}
         objectPosition={banner.objectPosition}
       />
+
+      <PageBreadcrumb currentLabel={t.nav.solutions} />
 
       {/* SECTION 2 — 全鏈路運營閉環 */}
       <section id="closed-loop" className="scroll-mt-28 section-container section-padding">

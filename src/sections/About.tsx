@@ -1,6 +1,7 @@
 import { useLanguage } from '../context/LanguageContext'
 import SectionHeader from '../components/SectionHeader'
 import SectionBanner from '../components/SectionBanner'
+import PageBreadcrumb from '../components/PageBreadcrumb'
 import { usePageBanner } from '../hooks/usePageBanner'
 
 export default function About() {
@@ -18,7 +19,9 @@ export default function About() {
         objectPosition={banner.objectPosition}
       />
 
-      <div className="section-container pt-[60px] pb-16 md:pb-20">
+      <PageBreadcrumb currentLabel={t.nav.about} />
+
+      <div className="section-container pt-6 pb-16 md:pt-8 md:pb-20">
         <SectionHeader
           headline={t.about.headline}
           badge={t.about.badge}

@@ -1,6 +1,7 @@
 import { type ReactNode } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import SectionBanner from '../components/SectionBanner'
+import PageBreadcrumb from '../components/PageBreadcrumb'
 import { usePageBanner } from '../hooks/usePageBanner'
 
 function LocationIcon() {
@@ -67,8 +68,10 @@ export default function Contact() {
         objectPosition={pageBanner.objectPosition}
       />
 
+      <PageBreadcrumb currentLabel={t.nav.contact} />
+
       {/* SECTION 2 — 聯絡資訊 + 辦公地點地圖 */}
-      <div className="section-container pt-[60px] pb-20 md:pb-24">
+      <div className="section-container pt-6 pb-20 md:pt-8 md:pb-24">
         <h2 className="text-center text-2xl font-bold text-neutral-900 md:text-3xl">
           {c.offices.title}
         </h2>
