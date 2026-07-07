@@ -79,7 +79,7 @@ export default function Contact() {
           {c.maps.title}
         </p>
 
-        <div className="mt-12 grid gap-10 lg:mt-16 lg:grid-cols-2 lg:gap-12">
+        <div className="mx-auto mt-12 max-w-xl lg:mt-16">
           {c.offices.locations.map((office, index) => {
             const map = c.maps.items[index]
             return (

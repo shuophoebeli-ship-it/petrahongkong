@@ -52,8 +52,7 @@ export default function Footer() {
 
         <div>
           <h5 className="mb-4 text-sm font-semibold text-white">{t.footer.contact.title}</h5>
-          <p className="text-sm leading-relaxed">{t.footer.contact.hkOffice}</p>
-          <p className="mt-2 text-sm leading-relaxed">{t.footer.contact.szOffice}</p>
+          <p className="text-sm leading-relaxed">{t.footer.contact.address}</p>
           <a
             href={`tel:${t.footer.contact.phone.replace(/\s/g, '')}`}
             className="mt-3 block text-sm transition-colors hover:text-gold-400"

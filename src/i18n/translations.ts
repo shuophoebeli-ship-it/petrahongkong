@@ -180,7 +180,7 @@ export interface Translation {
     navigation: { title: string }
     legal: { title: string; links: string[] }
     disclaimer: string
-    contact: { title: string; hkOffice: string; szOffice: string; phone: string; email: string }
+    contact: { title: string; address: string; phone: string; email: string }
   }
 }
 
@@ -253,7 +253,7 @@ export const translations: Record<Language, Translation> = {
         },
         {
           title: '聯繫我們',
-          description: '香港與深圳辦公室聯絡方式',
+          description: '香港辦公室聯絡方式',
           route: '/contact',
         },
       ],
@@ -338,12 +338,7 @@ export const translations: Record<Language, Translation> = {
               {
                 name: '香港融易鏈服務技術有限公司（100%控股）',
                 description:
-                  '公司技術主體，負責區塊鏈底層技術研發與RWA資產代幣鑄造、發行及持續運維，為集團提供核心技術支撐。',
-              },
-              {
-                name: '深圳融易鏈服務技術有限公司（100%新設）',
-                description:
-                  '深圳融易鏈專注於區塊鏈技術應用服務，為傳統實物資產項目提供數字化系統開發與數據上鏈技術開發，實現「資產上鏈數字化」。',
+                  '公司技術主體，負責區塊鏈底層技術研發與RWA資產代幣鑄造、發行及持續運維，為集團提供核心技術支撐，並為傳統實物資產項目提供數字化系統開發與數據上鏈技術服務，實現「資產上鏈數字化」。',
               },
             ],
           },
@@ -494,7 +489,7 @@ export const translations: Record<Language, Translation> = {
             label: '境內',
             title: '農產品資產數字化可信上鏈成功案例',
             description:
-              '以新會陳皮為全球首個農產品資產數字化標杆案例，完成數字身份確權、深圳數據交易所掛牌與監管合規審計，為沉澱資產提供可信上鏈與流動性突破路徑。',
+              '以新會陳皮為全球首個農產品資產數字化標杆案例，完成數字身份確權、合規數據平台掛牌與監管合規審計，為沉澱資產提供可信上鏈與流動性突破路徑。',
           },
           {
             label: '境外',
@@ -723,18 +718,10 @@ export const translations: Record<Language, Translation> = {
         locations: [
           {
             city: '香港',
-            company: '盤石管理科技有限公司',
+            company: '香港盤石管理科技有限公司',
             companyEn: 'Petra Management Technology Limited',
             address: '香港特別行政區九龍柯士甸道西1號\n環球貿易廣場8653C',
             phones: ['+852 6948 3416'],
-          },
-          {
-            city: '深圳',
-            company: '深圳市盤石家族數字科技有限公司',
-            companyEn: 'Shenzhen Pan Shi Family Digital Technology Co., Ltd.',
-            address:
-              '深圳市前海深港合作區南山街道夢海大道5188號\n前海深港夢工場北區一期G棟402L',
-            phones: ['+86 139 2464 4116', '+86 139 2466 4416'],
           },
         ],
       },
@@ -745,10 +732,6 @@ export const translations: Record<Language, Translation> = {
           {
             title: '香港辦公室',
             url: 'https://ditu.amap.com/search?query=%E9%A6%99%E6%B8%AF%20%E4%B9%9D%E9%BE%8D%20%E6%9F%AF%E5%A3%AB%E7%94%B8%E9%81%93%E8%A5%BF1%E8%99%9F%20%E7%92%B0%E7%90%83%E8%B2%BF%E6%98%93%E5%BB%A3%E5%A0%B4%208653C',
-          },
-          {
-            title: '深圳辦公室',
-            url: 'https://ditu.amap.com/search?query=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%89%8D%E6%B5%B7%E6%B7%B1%E6%B8%AF%E5%90%88%E4%BD%9C%E5%8D%80%E5%8D%97%E5%B1%B1%E8%A1%97%E9%81%93%E5%A4%A2%E6%B5%B7%E5%A4%A7%E9%81%935188%E8%99%9F%E5%89%8D%E6%B5%B7%E6%B7%B1%E6%B8%AF%E5%A4%A2%E5%B7%A5%E5%A0%B4%E5%8C%97%E5%8D%80%E4%B8%80%E6%9C%9FG%E6%A3%9F402L',
           },
         ],
       },
@@ -765,8 +748,7 @@ export const translations: Record<Language, Translation> = {
         '本網站由香港公司營運，未於中國內地辦理 ICP 備案。內地用戶訪問僅供資訊閱覽，不構成任何投資邀約、金融產品推介或業務推廣。任何人士參與相關業務，應自行遵守所在地法律法規並承擔相應責任。',
       contact: {
         title: '聯繫方式',
-        hkOffice: '香港：環球貿易廣場 8653C',
-        szOffice: '深圳：前海深港夢工場北區 G 棟 402L',
+        address: '香港特別行政區九龍柯士甸道西1號 環球貿易廣場8653C',
         phone: '+852 6948 3416',
         email: '297126626@qq.com',
       },
@@ -840,7 +822,7 @@ export const translations: Record<Language, Translation> = {
         },
         {
           title: 'Contact Us',
-          description: 'Hong Kong and Shenzhen office contact details',
+          description: 'Hong Kong office contact details',
           route: '/contact',
         },
       ],
@@ -926,12 +908,7 @@ export const translations: Record<Language, Translation> = {
               {
                 name: 'Hong Kong Rongyilian Service Technology Co., Ltd. (100% owned)',
                 description:
-                  'The group\'s core technology entity, responsible for blockchain infrastructure R&D, RWA asset token minting, issuance, and ongoing operations — providing essential technical support across the group.',
-              },
-              {
-                name: 'Shenzhen Rongyilian Service Technology Co., Ltd. (100% newly established)',
-                description:
-                  'Shenzhen Rongyilian focuses on blockchain technology application services, delivering digital system development and on-chain data technology for traditional physical asset projects to achieve "asset on-chain digitization".',
+                  'The group\'s core technology entity, responsible for blockchain infrastructure R&D, RWA asset token minting, issuance, and ongoing operations — providing essential technical support across the group, along with digital system development and on-chain data services for traditional physical asset projects.',
               },
             ],
           },
@@ -1082,7 +1059,7 @@ export const translations: Record<Language, Translation> = {
             label: 'Onshore',
             title: 'A Proven Case of Credible On-Chain Agricultural Asset Digitization',
             description:
-              'Xinhui Chenpi serves as a global benchmark for agricultural asset digitization — achieving digital identity verification, Shenzhen Data Exchange listing, and regulatory compliance to unlock liquidity for illiquid assets.',
+              'Xinhui Chenpi serves as a global benchmark for agricultural asset digitization — achieving digital identity verification, compliant data platform listing, and regulatory compliance to unlock liquidity for illiquid assets.',
           },
           {
             label: 'Offshore',
@@ -1318,27 +1295,15 @@ export const translations: Record<Language, Translation> = {
               'Unit 8653C, International Commerce Centre\n1 Austin Road West, Kowloon\nHong Kong SAR',
             phones: ['+852 6948 3416'],
           },
-          {
-            city: 'Shenzhen',
-            company: 'Shenzhen Pan Shi Family Digital Technology Co., Ltd.',
-            companyEn: 'Shenzhen Pan Shi Family Digital Technology Co., Ltd.',
-            address:
-              'Room 402L, Building G, Phase 1\nQianhai Shenzhen-Hong Kong Dream Workshop (North)\n5188 Meng Hai Avenue, Nanshan, Qianhai\nShenzhen, China',
-            phones: ['+86 139 2464 4116', '+86 139 2466 4416'],
-          },
         ],
       },
       maps: {
-        title: 'Office Locations',
+        title: 'Office Location',
         viewButton: 'View on Amap',
         items: [
           {
             title: 'Hong Kong Office',
             url: 'https://ditu.amap.com/search?query=%E9%A6%99%E6%B8%AF%20%E4%B9%9D%E9%BE%8D%20%E6%9F%AF%E5%A3%AB%E7%94%B8%E9%81%93%E8%A5%BF1%E8%99%9F%20%E7%92%B0%E7%90%83%E8%B2%BF%E6%98%93%E5%BB%A3%E5%A0%B4%208653C',
-          },
-          {
-            title: 'Shenzhen Office',
-            url: 'https://ditu.amap.com/search?query=%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%89%8D%E6%B5%B7%E6%B7%B1%E6%B8%AF%E5%90%88%E4%BD%9C%E5%8D%80%E5%8D%97%E5%B1%B1%E8%A1%97%E9%81%93%E5%A4%A2%E6%B5%B7%E5%A4%A7%E9%81%935188%E8%99%9F%E5%89%8D%E6%B5%B7%E6%B7%B1%E6%B8%AF%E5%A4%A2%E5%B7%A5%E5%A0%B4%E5%8C%97%E5%8D%80%E4%B8%80%E6%9C%9FG%E6%A3%9F402L',
           },
         ],
       },
@@ -1355,8 +1320,7 @@ export const translations: Record<Language, Translation> = {
         'This website is operated by a Hong Kong company and has not obtained ICP filing in mainland China. Access by users in mainland China is for informational purposes only and does not constitute any investment invitation, financial product recommendation, or business solicitation. Anyone participating in related activities should comply with applicable local laws and regulations and bear corresponding responsibilities.',
       contact: {
         title: 'Contact',
-        hkOffice: 'Hong Kong: ICC Tower, Unit 8653C',
-        szOffice: 'Shenzhen: Qianhai Dream Workshop, Building G, 402L',
+        address: 'Unit 8653C, International Commerce Centre, 1 Austin Road West, Kowloon, Hong Kong SAR',
         phone: '+852 6948 3416',
         email: '297126626@qq.com',
       },
