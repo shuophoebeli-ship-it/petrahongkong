@@ -2,24 +2,6 @@ import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 import { getFooterNavLinks } from '../config/navigation'
 
-function DisclaimerText({ text }: { text: string }) {
-  const parts = text.split(/(RWA)/g)
-
-  return (
-    <>
-      {parts.map((part, index) =>
-        part === 'RWA' ? (
-          <span key={index} className="font-semibold text-[#B68A2A]">
-            {part}
-          </span>
-        ) : (
-          <span key={index}>{part}</span>
-        ),
-      )}
-    </>
-  )
-}
-
 export default function Footer() {
   const { t } = useLanguage()
   const footerNavLinks = getFooterNavLinks(t)
@@ -84,7 +66,7 @@ export default function Footer() {
       <div className="border-t border-white/[0.08]">
         <div className="section-container px-4 pt-6 pb-7 md:pb-8">
           <p className="mx-auto max-w-[1100px] text-center text-[12px] leading-[1.8] font-normal text-[#9B9B9B] md:text-[13px]">
-            <DisclaimerText text={t.footer.disclaimer} />
+            {t.footer.disclaimer}
           </p>
         </div>
       </div>

@@ -741,11 +741,11 @@ export const translations: Record<Language, Translation> = {
         title: '導航',
       },
       legal: {
-        title: '法律信息',
+        title: '法律資訊',
         links: ['私隱政策', '服務條款', '免責聲明'],
       },
       disclaimer:
-        '本網站由香港公司營運，未於中國內地辦理 ICP 備案。內地用戶訪問僅供資訊閱覽，不構成任何投資邀約、金融產品推介或業務推廣。任何人士參與相關業務，應自行遵守所在地法律法規並承擔相應責任。',
+        '本網站由香港公司營運，未於中國內地辦理 ICP 備案。內地用戶訪問僅供資訊閱覽，不構成任何投資邀約或業務推廣。任何人士參與相關業務，應自行遵守所在地法律法規並承擔相應責任。',
       contact: {
         title: '聯繫方式',
         address: '香港特別行政區九龍柯士甸道西1號 環球貿易廣場8653C',
@@ -1317,7 +1317,7 @@ export const translations: Record<Language, Translation> = {
         links: ['Privacy Policy', 'Terms of Service', 'Disclaimer'],
       },
       disclaimer:
-        'This website is operated by a Hong Kong company and has not obtained ICP filing in mainland China. Access by users in mainland China is for informational purposes only and does not constitute any investment invitation, financial product recommendation, or business solicitation. Anyone participating in related activities should comply with applicable local laws and regulations and bear corresponding responsibilities.',
+        'This website is operated by a Hong Kong company and has not obtained ICP filing in mainland China. Access by users in mainland China is for informational purposes only and does not constitute any investment invitation or business solicitation. Anyone participating in related activities should comply with applicable local laws and regulations and bear corresponding responsibilities.',
       contact: {
         title: 'Contact',
         address: 'Unit 8653C, International Commerce Centre, 1 Austin Road West, Kowloon, Hong Kong SAR',
