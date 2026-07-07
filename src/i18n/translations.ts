@@ -177,12 +177,9 @@ export interface Translation {
     }
   }
   footer: {
-    rights: string
-    privacy: string
-    terms: string
     navigation: { title: string }
     legal: { title: string; links: string[] }
-    copyright: { title: string; text: string }
+    disclaimer: string
     contact: { title: string; hkOffice: string; szOffice: string; phone: string; email: string }
   }
 }
@@ -757,9 +754,6 @@ export const translations: Record<Language, Translation> = {
       },
     },
     footer: {
-      rights: '© 2025 香港盤石管理科技有限公司 版權所有',
-      privacy: '私隱政策',
-      terms: '服務條款',
       navigation: {
         title: '導航',
       },
@@ -767,10 +761,8 @@ export const translations: Record<Language, Translation> = {
         title: '法律信息',
         links: ['私隱政策', '服務條款', '免責聲明'],
       },
-      copyright: {
-        title: '版權信息',
-        text: '© 2025 香港盤石管理科技有限公司 版權所有',
-      },
+      disclaimer:
+        '本網站由香港公司營運，未於中國內地辦理 ICP 備案。內地用戶訪問僅供資訊閱覽，不構成任何投資邀約、金融產品推介或業務推廣。任何人士參與相關業務，應自行遵守所在地法律法規並承擔相應責任。',
       contact: {
         title: '聯繫方式',
         hkOffice: '香港：環球貿易廣場 8653C',
@@ -1352,9 +1344,6 @@ export const translations: Record<Language, Translation> = {
       },
     },
     footer: {
-      rights: '© 2025 Petra Management Technology Limited. All rights reserved.',
-      privacy: 'Privacy Policy',
-      terms: 'Terms of Service',
       navigation: {
         title: 'Navigation',
       },
@@ -1362,10 +1351,8 @@ export const translations: Record<Language, Translation> = {
         title: 'Legal',
         links: ['Privacy Policy', 'Terms of Service', 'Disclaimer'],
       },
-      copyright: {
-        title: 'Copyright',
-        text: '© 2025 Petra Management Technology Limited. All rights reserved.',
-      },
+      disclaimer:
+        'This website is operated by a Hong Kong company and has not obtained ICP filing in mainland China. Access by users in mainland China is for informational purposes only and does not constitute any investment invitation, financial product recommendation, or business solicitation. Anyone participating in related activities should comply with applicable local laws and regulations and bear corresponding responsibilities.',
       contact: {
         title: 'Contact',
         hkOffice: 'Hong Kong: ICC Tower, Unit 8653C',
