@@ -40,10 +40,25 @@ export default function Home() {
             {about.subtitle}
           </p>
 
-          <div className="mt-8 space-y-5 text-left text-sm leading-relaxed text-neutral-700 md:mt-10 md:text-base md:leading-loose">
-            {about.paragraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 32)}>{paragraph}</p>
-            ))}
+          <div className="mt-8 text-left text-sm leading-relaxed text-neutral-700 md:mt-10 md:text-base md:leading-loose">
+            <p>
+              {about.intro.before}
+              <span className="mx-0.5 text-lg font-bold text-gold-600 md:text-xl">
+                {about.intro.emphasis}
+              </span>
+              {about.intro.after}
+            </p>
+
+            <ol className="mt-6 space-y-3 md:mt-8">
+              {about.highlights.map((item, index) => (
+                <li key={item} className="flex gap-3">
+                  <span className="shrink-0 font-semibold tabular-nums text-gold-700">
+                    {index + 1}.
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ol>
           </div>
 
           <div className="mt-8 flex justify-center md:mt-10 md:justify-end">

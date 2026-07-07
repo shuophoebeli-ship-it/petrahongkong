@@ -31,7 +31,8 @@ export interface Translation {
     aboutIntro: {
       title: string
       subtitle: string
-      paragraphs: string[]
+      intro: { before: string; emphasis: string; after: string }
+      highlights: string[]
       cta: string
     }
     portals: { title: string; description: string; route: string }[]
@@ -214,10 +215,16 @@ export const translations: Record<Language, Translation> = {
       aboutIntro: {
         title: '關於我們',
         subtitle: 'ABOUT US',
-        paragraphs: [
-          '盤石管理科技有限公司（Petra Management Technology Limited，簡稱「盤石數科」）坐落於香港第一高樓——環球貿易廣場（ICC）86 樓，俯瞰維多利亞港，不僅具備絕佳的視野，而且擁有舒適的接待配套。',
-          '「出海香港，放眼全球」，盤石香港擁有優越的地理位置，步行可直達香港西九龍高鐵站，一站地鐵直達中環，不僅可以快速迎接內地來港貴賓，而且能夠與各大金融服務機構緊密聯繫，為中國新中層家庭提供絕佳的環球資產配置服務，助力家業傳承、三代興旺、家庭幸福、社會和諧。',
-          '深圳前海盤石數科以「數據資產」和「數字家辦」為立足點，以創新科技和專業服務為雙引擎，構建完整閉環的數字科技業務布局。公司通過優質數據資產化運營，幫助客戶企業打通新金融模式，將數據資產納入資產負債表，從而進一步得到融資等業務發展。',
+        intro: {
+          before:
+            '盤石管理科技有限公司，於2018年在香港成立，致力於通過區塊鏈技術 + 大數據 + 人工智能，構建起鏈接真實世界資產（RWA）與數字經濟的橋樑，打造',
+          emphasis: '持續、穩定、可控、可算',
+          after: '的數字化價值流通新生態。',
+        },
+        highlights: [
+          '以區塊鏈技術為核心',
+          '整合香港上市公司資源',
+          '構建「境內數字資產 + 境外股幣結合」的數字金融新生態',
         ],
         cta: '詳細信息 >',
       },
@@ -800,10 +807,16 @@ export const translations: Record<Language, Translation> = {
       aboutIntro: {
         title: 'About Us',
         subtitle: 'ABOUT US',
-        paragraphs: [
-          'Petra Management Technology Limited ("Petra Digital") is located on the 86th floor of the International Commerce Centre (ICC) — Hong Kong\'s tallest building — overlooking Victoria Harbour with exceptional views and premium reception facilities.',
-          '"Based in Hong Kong, serving the world." With a prime location steps from West Kowloon High Speed Rail and one MTR stop from Central, we welcome mainland guests with ease and maintain close ties with leading financial institutions — delivering global asset allocation services for China\'s emerging affluent families.',
-          'Petra Digital in Shenzhen Qianhai focuses on data assets and digital family office services — powered by innovation and professional expertise to build a complete digital technology business loop, helping clients integrate data assets into balance sheets and unlock new financing opportunities.',
+        intro: {
+          before:
+            'Petra Management Technology Limited was founded in Hong Kong in 2018. Through blockchain technology, big data, and artificial intelligence, we build a bridge connecting real-world assets (RWA) with the digital economy — creating a new ecosystem for digital value circulation that is ',
+          emphasis: 'sustainable, stable, controllable, and measurable',
+          after: '.',
+        },
+        highlights: [
+          'Blockchain technology at the core',
+          'Integrated resources of Hong Kong listed companies',
+          'Building a new digital finance ecosystem of "onshore digital assets + offshore equity-token integration"',
         ],
         cta: 'Learn more >',
       },
