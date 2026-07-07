@@ -6,8 +6,9 @@ const INTERVAL_MS = 5000
 
 export default function HeroCarousel() {
   const { t, language } = useLanguage()
-  const slogan = t.home.carousel.slogan
+  const slogans = t.home.carousel.slogans
   const [active, setActive] = useState(0)
+  const slogan = slogans[active] ?? slogans[0]
 
   useEffect(() => {
     const timer = window.setInterval(() => {

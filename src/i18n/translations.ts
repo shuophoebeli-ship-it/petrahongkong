@@ -26,7 +26,7 @@ export interface Translation {
   home: {
     carousel: {
       ariaLabel: string
-      slogan: string
+      slogans: string[]
     }
     aboutIntro: {
       title: string
@@ -205,7 +205,11 @@ export const translations: Record<Language, Translation> = {
     home: {
       carousel: {
         ariaLabel: '首頁輪播',
-        slogan: '立足香港・背靠祖國・面向全球',
+        slogans: [
+          '立足香港・背靠祖國・面向全球',
+          'RWA（真实世界资产）数字化基础设施服务机构',
+          '向全球推广具备中国文化元素的特色产业优质资产',
+        ],
       },
       aboutIntro: {
         title: '關於我們',
@@ -787,7 +791,11 @@ export const translations: Record<Language, Translation> = {
     home: {
       carousel: {
         ariaLabel: 'Home carousel',
-        slogan: 'Based in Hong Kong · Connected to the Mainland · Serving the World',
+        slogans: [
+          'Based in Hong Kong · Connected to the Mainland · Serving the World',
+          'RWA (Real World Assets) Digital Infrastructure Service Provider',
+          'Promoting quality specialty industry assets with Chinese cultural elements to the world',
+        ],
       },
       aboutIntro: {
         title: 'About Us',
