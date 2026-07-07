@@ -294,7 +294,7 @@ export const translations: Record<Language, Translation> = {
     },
     business: {
       banner: {
-        headline: '技術+資本雙輪驅動　構建RWA價值生態',
+        headline: '技術＋資本雙輪驅動，構建 RWA 價值生態',
       },
       anchorNav: [
         { id: 'core-positioning', label: '核心定位' },
@@ -863,7 +863,7 @@ export const translations: Record<Language, Translation> = {
     },
     business: {
       banner: {
-        headline: 'Tech + Capital Dual Drive — Building the RWA Value Ecosystem',
+        headline: 'Tech + Capital Dual Drive, Building the RWA Value Ecosystem',
       },
       anchorNav: [
         { id: 'core-positioning', label: 'Core Positioning' },

@@ -170,6 +170,7 @@ export default function Business() {
     <div className="bg-white">
       <SectionBanner
         size="about"
+        headlineVariant="display"
         src={banner.src}
         alt={banner.alt}
         headline={b.banner.headline}
