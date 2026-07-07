@@ -13,6 +13,48 @@ const PORTAL_ICONS = [
   'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
 ]
 
+const HIGHLIGHT_ICON_TYPES = ['blockchain', 'finance', 'ecosystem'] as const
+type HighlightIconType = (typeof HIGHLIGHT_ICON_TYPES)[number]
+
+function AboutHighlightIcon({ type }: { type: HighlightIconType }) {
+  const props = {
+    className: 'h-7 w-7',
+    viewBox: '0 0 32 32',
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 1.5,
+    strokeLinecap: 'round' as const,
+    strokeLinejoin: 'round' as const,
+  }
+
+  switch (type) {
+    case 'blockchain':
+      return (
+        <svg {...props} aria-hidden>
+          <rect x="4" y="4" width="10" height="10" rx="1.5" />
+          <rect x="18" y="4" width="10" height="10" rx="1.5" />
+          <rect x="11" y="18" width="10" height="10" rx="1.5" />
+          <path d="M14 9h4M23 9v4M16 14v4" />
+        </svg>
+      )
+    case 'finance':
+      return (
+        <svg {...props} aria-hidden>
+          <path d="M6 26V12l10-6 10 6v14" />
+          <path d="M12 26v-8h8v8M16 8v4" />
+          <path d="M10 16h12M10 20h8" />
+        </svg>
+      )
+    case 'ecosystem':
+      return (
+        <svg {...props} aria-hidden>
+          <circle cx="16" cy="16" r="10" />
+          <path d="M16 6v20M6 16h20M9 9l14 14M23 9L9 23" />
+        </svg>
+      )
+  }
+}
+
 export default function Home() {
   const { t } = useLanguage()
   const h = t.home
@@ -49,16 +91,19 @@ export default function Home() {
               {about.intro.after}
             </p>
 
-            <ol className="mt-6 space-y-3 md:mt-8">
+            <div className="mt-6 grid grid-cols-1 gap-4 md:mt-8 md:grid-cols-3 md:gap-6">
               {about.highlights.map((item, index) => (
-                <li key={item} className="flex gap-3">
-                  <span className="shrink-0 font-semibold tabular-nums text-gold-700">
-                    {index + 1}.
-                  </span>
-                  <span>{item}</span>
-                </li>
+                <div
+                  key={item}
+                  className="flex flex-col items-center rounded-xl border border-gold-500/30 bg-white/95 p-5 text-center shadow-sm md:p-6"
+                >
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg border border-gold-500/25 bg-gold-500/5 text-gold-600">
+                    <AboutHighlightIcon type={HIGHLIGHT_ICON_TYPES[index] ?? 'blockchain'} />
+                  </div>
+                  <p className="text-sm leading-relaxed text-neutral-700 md:text-base">{item}</p>
+                </div>
               ))}
-            </ol>
+            </div>
           </div>
 
           <div className="mt-8 flex justify-center md:mt-10 md:justify-end">
